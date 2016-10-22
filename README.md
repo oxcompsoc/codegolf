@@ -46,7 +46,7 @@ Here's a quick reference for the symbols in the GCD program:
 ```
 ;           Pop and discard top item from stack (cleanup)
 '2706 410'  Raw string with two numbers
-~           Pops the string and evaluates it, pops two numbers onto stack
+~           Pops the string and evaluates it, pushes two numbers onto stack
 {           New code block
   .         Duplicates the top item on the stack (t = b)
   @         Rotates the third element on the stack to the top (t, a, b)
