@@ -26,10 +26,40 @@ This repository contains a bunch of challenges to try in the evening.
 
 ## So how does GolfScript work?
 
-Firstly, you might want to check out the [GolfScript examples][examples] and the
-[quick reference][quickref].
+Firstly, you might want to check out the [GolfScript examples][examples], the
+[builtiin references][builtins] and the [quick reference][quickref]. 
+
+The Euclidean algorithm calculated the greatest common denominator between two
+numbers `a` and `b`:
+
+```
+function gcd(a, b)
+  while b != 0
+    t := b
+    b := a mod b
+    a := t
+  return a
+```
+
+Here's a
+quick reference for the symbols in the GCD program:
+
+```
+;           Pop and discard top item from stack (cleanup)
+'2706 410'  Raw string with two numbers on the stack (a and b)
+{           New code block
+  .         Duplicates the top item on the stack (t = b)
+  @         Rotates the third element on the stack to the top (t, a, b)
+  \         Swaps the top two items on the stack (t, b, a)
+  %         Mod (t, a mod b)
+  .         Duplicates the top item on the stack
+}
+do          Pops the stack, and if non-zero then repeat code block (we want a)
+;           Pop (cleanup)
+```
 
 [golfscript]: http://www.golfscript.com/golfscript/
 [ruby]: http://www.golfscript.com/golfscript/
 [examples]: http://www.golfscript.com/golfscript/examples.html
 [quickref]: http://www.golfscript.com/golfscript/quickref.html
+[builtins]: http://www.golfscript.com/golfscript/builtin.html
