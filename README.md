@@ -74,6 +74,9 @@ language you know better!
 
 Bonus challenge: implement a your own language for code golfing.
 
+I'll happily add any more suggestions, e.g. from the [Programming Puzzles and
+Code Golf Stack Exchange][ppcg] or [subreddit][reddit].
+
 [golfscript]: http://www.golfscript.com/golfscript/
 [ruby]: http://www.golfscript.com/golfscript/
 [examples]: http://www.golfscript.com/golfscript/examples.html
@@ -82,3 +85,5 @@ Bonus challenge: implement a your own language for code golfing.
 [euler1]: https://projecteuler.net/problem=1
 [euler2]: https://projecteuler.net/problem=2
 [brainfuck]: https://en.wikipedia.org/wiki/Brainfuck
+[ppcg]: http://codegolf.stackexchange.com
+[reddit]: https://www.reddit.com/r/codegolf/
