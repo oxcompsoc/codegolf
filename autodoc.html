@@ -4,7 +4,9 @@
         <title>Auto documenter for GolfScript</title>
     </head>
     <body>
-        <textarea id="input"></textarea>
+        <textarea id="input">
+;'2706 410'
+~{.@\%.}do; </textarea>
         <pre id="output"></pre>
         <script>
 function onchange() {
@@ -14,26 +16,37 @@ function onchange() {
 }
 
 function tokens(src) {
-    return []
+    return [";", "'2706 410'", "~", "{", ".", "@", "\\", "%", ".", "}", "do",
+    ";"];
 }
 
 function showDocs(toks) {
     var documentation = {
+        ";" : "Pop and discard the top item from stack",
+        "~" : "Bitwise, dump, or eval",
+        "!" : "Logical not",
+        "{" : "Start code block",
+        "}" : "End code block",
+        "." : "Duplicate the top item on the stack",
+        "@" : "Rotate the top item with the third down",
+        "/" : "div, split, split in groups of size, unfold, each",
+        "%" : "mod, map, every ith element, clean split",
+        "do": "Pops the top value from the stack and if it is not zero repeat the preceding block"
     };
     var output = "";
     for (var i = 0; i < toks.length; i++) {
         var tok = toks[i];
-        if (tok in toks) {
-            output = tok + "\t" + documentation[tok] + "\n";
+        if (tok in documentation) {
+            output += tok + "\t\t" + documentation[tok] + "\n";
         }
         else if (tok[0] == '\'') {
-            output = tok + "\t Raw string\n";
+            output += tok + "\t\tRaw string\n";
         }
         else if (tok[0] == '"') {
-            output = tok + "\t String\n";
+            output += tok + "\t\tString\n";
         }
         else {
-            output = tok + "\n";
+            output += tok + "\n";
         }
     }
     document.getElementById("output").innerText = output;
@@ -41,6 +54,8 @@ function showDocs(toks) {
 
 var inputArea = document.getElementById("input");
 inputArea.addEventListener("input", onchange, false);
+
+onchange();
         </script>
     </body>
 </html>
