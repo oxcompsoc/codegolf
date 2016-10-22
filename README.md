@@ -58,8 +58,18 @@ do          Pops the stack, and if non-zero then repeat code block (we want a)
 ;           Pop (cleanup)
 ```
 
+## Challenges
+
+These problems are quite simple, so I'd recommend starting with them for the
+code golfing.
+
+* [Project Euler 1 - Multiples of 3 and 5][euler1]
+* [Project Euler 2 - Even Fibonacci numbers][euler2]
+
 [golfscript]: http://www.golfscript.com/golfscript/
 [ruby]: http://www.golfscript.com/golfscript/
 [examples]: http://www.golfscript.com/golfscript/examples.html
 [quickref]: http://www.golfscript.com/golfscript/quickref.html
 [builtins]: http://www.golfscript.com/golfscript/builtin.html
+[euler1]: https://projecteuler.net/problem=1
+[euler2]: https://projecteuler.net/problem=2
