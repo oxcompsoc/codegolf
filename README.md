@@ -11,8 +11,8 @@ This repository contains a bunch of challenges to try in the evening.
 
 ## Setting up GolfScript
 
-1. Head over to the [GolfScript site][] and download the interpreter for it (it
-   is a Ruby script)
+1. Head over to the [GolfScript site][golfscript] and download the interpreter 
+   for it (it is a Ruby script)
 2. Install [Ruby][] if you haven't already
 3. Create a simple example file `gcd.gs`
 
@@ -78,7 +78,7 @@ I'll happily add any more suggestions, e.g. from the [Programming Puzzles and
 Code Golf Stack Exchange][ppcg] or [subreddit][reddit].
 
 [golfscript]: http://www.golfscript.com/golfscript/
-[ruby]: http://www.golfscript.com/golfscript/
+[ruby]: https://www.ruby-lang.org
 [examples]: http://www.golfscript.com/golfscript/examples.html
 [quickref]: http://www.golfscript.com/golfscript/quickref.html
 [builtins]: http://www.golfscript.com/golfscript/builtin.html
