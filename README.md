@@ -66,6 +66,8 @@ code golfing.
 * [Project Euler 1 - Multiples of 3 and 5][euler1]
 * [Project Euler 2 - Even Fibonacci numbers][euler2]
 
+Bonus challenge: implement a your own language for code golfing.
+
 [golfscript]: http://www.golfscript.com/golfscript/
 [ruby]: http://www.golfscript.com/golfscript/
 [examples]: http://www.golfscript.com/golfscript/examples.html
