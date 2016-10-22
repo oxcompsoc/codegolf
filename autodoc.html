@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Auto documenter for GolfScript</title>
+    </head>
+    <body>
+        <textarea id="input"></textarea>
+        <pre id="output"></pre>
+        <script>
+function onchange() {
+    var inputArea = document.getElementById("input");
+    var toks = tokens(inputArea.value);
+    showDocs(toks);
+}
+
+function tokens(src) {
+    return []
+}
+
+function showDocs(toks) {
+    var documentation = {
+    };
+    var output = "";
+    for (var i = 0; i < toks.length; i++) {
+        var tok = toks[i];
+        if (tok in toks) {
+            output = tok + "\t" + documentation[tok] + "\n";
+        }
+        else if (tok[0] == '\'') {
+            output = tok + "\t Raw string\n";
+        }
+        else if (tok[0] == '"') {
+            output = tok + "\t String\n";
+        }
+        else {
+            output = tok + "\n";
+        }
+    }
+    document.getElementById("output").innerText = output;
+}
+
+var inputArea = document.getElementById("input");
+inputArea.addEventListener("input", onchange, false);
+        </script>
+    </body>
+</html>
