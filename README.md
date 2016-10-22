@@ -41,21 +41,21 @@ function gcd(a, b)
   return a
 ```
 
-Here's a
-quick reference for the symbols in the GCD program:
+Here's a quick reference for the symbols in the GCD program:
 
 ```
 ;           Pop and discard top item from stack (cleanup)
-'2706 410'  Raw string with two numbers on the stack (a and b)
+'2706 410'  Raw string with two numbers
+~           Pops the string and evaluates it, pops two numbers onto stack
 {           New code block
   .         Duplicates the top item on the stack (t = b)
   @         Rotates the third element on the stack to the top (t, a, b)
   \         Swaps the top two items on the stack (t, b, a)
-  %         Mod (t, a mod b)
-  .         Duplicates the top item on the stack
+  %         Mod so stack is now (t, a mod b)
+  .         Duplicates the top item on the stack, so it can be checked to 0
 }
 do          Pops the stack, and if non-zero then repeat code block (we want a)
-;           Pop (cleanup)
+;           Pop, because we want a (not b)
 ```
 
 ## Challenges
