@@ -65,6 +65,12 @@ code golfing.
 
 * [Project Euler 1 - Multiples of 3 and 5][euler1]
 * [Project Euler 2 - Even Fibonacci numbers][euler2]
+* Printing Pascal's triangle
+
+These challenges are a bit more complex, and you should therefore try them in a
+language you know better!
+
+* A [Brainfuck][] interpreter (or better, a compiler)
 
 Bonus challenge: implement a your own language for code golfing.
 
@@ -75,3 +81,4 @@ Bonus challenge: implement a your own language for code golfing.
 [builtins]: http://www.golfscript.com/golfscript/builtin.html
 [euler1]: https://projecteuler.net/problem=1
 [euler2]: https://projecteuler.net/problem=2
+[brainfuck]: https://en.wikipedia.org/wiki/Brainfuck
